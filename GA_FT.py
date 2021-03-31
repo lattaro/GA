@@ -22,7 +22,7 @@ mutacao_3 = 1
 total = 1
 comprimento = [0.0000015555511]
 
-lambda_arq = open('C:\\Users\\Alex\\Documents\\Python\\GA\\lambdas','w')
+lambda_arq = open('path','w')
 
 k = 0
 while k < total:
@@ -42,7 +42,7 @@ conmutacao=10   #Probabilidade de mutação
 concrossover=0.9 #Probabilidade de crossover
 
 
-malha_2 = open('C:\\Users\\Alex\\Documents\\Python\\GA\\Malha_2.txt','r')
+malha_2 = open('path','r')
 
 
 linha = malha_2.readline()
@@ -70,7 +70,7 @@ while geracao <= ngeracao:
         z = 0
         aptidao = []
         while z <= 3:
-            malha_3 = open('C:\\Users\\Alex\\Documents\\Python\\GA\\Malha_3.txt','w')
+            malha_3 = open('path','w')
 
             matriz_aleatoria = []
 
@@ -103,11 +103,10 @@ while geracao <= ngeracao:
             print('malha_3:',matriz_aleatoria)
             malha_3.close()    
             # substituir o amostra pelo FEM
-            #amostra = subprocess.run(['C:\\Users\\Alex\\Documents\\Python\\GA\\teste_3.py'])
             amostra = np.linalg.norm(matriz_aleatoria)
             
             
-            arquivo_amostra = open('C:\\Users\\Alex\\Documents\\Python\\GA\\Arquivo_amostra.txt','w')
+            arquivo_amostra = open('path','w')
             arquivo_amostra.write('{}      {:0000000000000000f} \n'.format(amostra,0.0000000000000000))
             print('\namostra: ',amostra,'\n')
             aptidao.append(amostra)
